@@ -8,6 +8,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 import time
 
 
+
 driver = webdriver.Chrome(
     'C:/Users/USER/Desktop/insrtagram_pic/chromedriver.exe')
 
@@ -45,11 +46,11 @@ searchbox = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.XPATH, "//input[@placeholder='Search']")))
 searchbox.clear()
 
-# searching for the user
+# searching user
 keyword = "Beauties.Bangladesh"
 searchbox.send_keys(keyword)
 
-# FIXING THE DOUBLE ENTER
+# FIXING DOUBLE ENTER
 time.sleep(2)
 searchbox.send_keys(Keys.ARROW_UP)
 searchbox.send_keys(Keys.ARROW_UP)
@@ -59,3 +60,28 @@ searchbox.send_keys(Keys.ARROW_UP)
 searchbox.send_keys(Keys.ARROW_UP)
 searchbox.send_keys(Keys.ARROW_UP)
 searchbox.send_keys(Keys.ENTER)
+
+
+scroll = 4
+for x in range(0, scroll):
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    time.sleep(1)
+
+
+
+
+
+
+
+
+driver.close(60)
+
+
+
+
+
+
+
+
+
+
