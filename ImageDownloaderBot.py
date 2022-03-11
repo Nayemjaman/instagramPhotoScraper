@@ -27,3 +27,10 @@ password.send_keys("forgot@password")
 
 #login button and click it
 button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button[type='submit']"))).click()
+
+
+
+
+time.sleep(2)
+#Not Now button
+alert = WebDriverWait(driver, 15).until(EC.element_to_be_clickable((By.XPATH, '//button[contains(text(), "Not Now")]'))).click()
