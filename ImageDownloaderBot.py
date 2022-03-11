@@ -1,5 +1,6 @@
 # import all the modules
-
+import os
+import wget
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
@@ -75,6 +76,19 @@ images_links = [a for a in images_links if str(a).startswith("https://www.instag
 
 
 
+path = os.getcwd()
+path = os.path.join(path, keyword)
+
+#for directory
+os.mkdir(path)
+
+counter = 0
+
+#for downloading images
+for image in images_links:
+    save_as = os.path.join(path, keyword + str(counter) + '.jpg')
+    wget.download(image, save_as)
+    counter += 1
 
 
 
