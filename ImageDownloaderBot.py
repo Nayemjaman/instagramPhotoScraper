@@ -1,5 +1,5 @@
 # import all the modules
-from lib2to3.pgen2 import driver
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
@@ -11,8 +11,9 @@ import time
 
 driver = webdriver.Chrome(
     'C:/Users/USER/Desktop/insrtagram_pic/chromedriver.exe')
-
+# driver.close()
 driver.get('https://www.instagram.com')
+
 
 
 # username
@@ -67,6 +68,10 @@ for x in range(0, scroll):
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     time.sleep(1)
 
+images_links = driver.find_elements_by_tag_name('a')
+images_links = [a.get_attribute('href') for a in images_links]
+#narrow down all links to image links only
+images_links = [a for a in images_links if str(a).startswith("https://www.instagram.com/p/")]
 
 
 
@@ -74,7 +79,8 @@ for x in range(0, scroll):
 
 
 
-driver.close(60)
+time.sleep(60)
+driver.close()
 
 
 
