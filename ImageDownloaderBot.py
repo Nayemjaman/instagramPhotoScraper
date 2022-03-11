@@ -34,3 +34,34 @@ button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELEC
 time.sleep(2)
 #Not Now button
 alert = WebDriverWait(driver, 15).until(EC.element_to_be_clickable((By.XPATH, '//button[contains(text(), "Not Now")]'))).click()
+
+
+#the search input field
+searchbox = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//input[@placeholder='Search']")))
+searchbox.clear()
+
+#searching for the user
+keyword = "Beauties of Bangladesh"
+searchbox.send_keys(keyword)
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
