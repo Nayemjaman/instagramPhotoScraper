@@ -18,6 +18,9 @@ driver.get('https://www.instagram.com')
 
 
 # username
+acc_name = input('Enter User Name :')
+passw = input('Enter User password :')
+
 username = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.CSS_SELECTOR, "input[name='username']")))
 # password
@@ -26,10 +29,10 @@ password = WebDriverWait(driver, 10).until(
 
 # enter username and password
 username.clear()
-username.send_keys("python_is_everywhere")
+username.send_keys(acc_name)
 
 password.clear()
-password.send_keys("forgot@password")
+password.send_keys(passw)
 time.sleep(2)
 
 # login button and click it
@@ -93,7 +96,7 @@ for image in images_links:
 
 
 
-time.sleep(60)
+time.sleep(30)
 driver.close()
 
 
