@@ -12,7 +12,6 @@ import time
 
 driver = webdriver.Chrome(
     'C:/Users/USER/Desktop/insrtagram_pic/chromedriver.exe')
-# driver.close()
 driver.get('https://www.instagram.com')
 
 
