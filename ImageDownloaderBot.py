@@ -18,11 +18,10 @@ driver.get('https://www.instagram.com')
 
 # username
 acc_name = input('Enter User Name : ')
-passw = input('Enter User password : ')
-
 username = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.CSS_SELECTOR, "input[name='username']")))
 # password
+passw = input('Enter User password : ')
 password = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.CSS_SELECTOR, "input[name='password']")))
 
