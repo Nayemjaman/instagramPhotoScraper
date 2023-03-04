@@ -8,6 +8,5 @@
 ## AUTOMATING IMAGE DOWNLOADER.
 
 
-________________________________________________________________________________________
 here you can download photos from an Instagram account using your own Instagram account
--------------------------------------------------------------------------------------------
+
