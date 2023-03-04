@@ -1,6 +1,6 @@
 # Web Scraping Instagram with Selenium.
-# InstagramPhotoScraper.
+## InstagramPhotoScraper.
 
-AUTOMATING IMAGE DOWNLOADER.
+###AUTOMATING IMAGE DOWNLOADER.
 
 Instagram Photo downloader.
